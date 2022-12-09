@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: Argocd_demorepo
+spec:
+  destination:
+    name: ''
+    namespace: ''
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: Argocd_demorepo
+    repoURL: 'https://github.com/Pavankumaryerraji/Argocd_demorepo.git'
+    targetRevision: HEAD
+  project: default
+  syncPolicy:
+    automated: null
+    syncOptions: []
